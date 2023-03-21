@@ -1,0 +1,123 @@
+.header_container{
+    height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 8.125rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 1.875rem;
+	border-right: 2px solid #70707020;
+    z-index: 99;
+	background-color: rgb(255, 253, 253);
+    color: rgb(12, 12, 12);
+
+}
+.side_menu ul li{
+	color: black;
+}
+.nav-items{
+	margin-left: -1.5rem;
+}
+@media (max-width:1800.98px) {
+	.header_container {
+		padding: 1.25rem;
+		width: 6.875rem;
+	}
+}
+
+@media (max-width:1439.98px) {
+	.header_container {
+		width: 5rem;
+		padding: 0.9375rem;
+		color: white;
+	}
+	.nav-items{
+		margin-left: -1.5rem;
+	}
+}
+
+.header_container .logo img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1.2rem;
+    display: block;
+}
+.side_menu{
+    position: fixed;
+	top: 50%;
+	transform: translateY(-40%);
+}
+.side_menu ul{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 50rem;
+	max-width: calc(100vh - 150px);
+	writing-mode: vertical-lr;
+	padding-bottom: 3.125rem;
+}
+.side_menu ul li{
+    display: block;
+	transform: scale(-1);
+	line-height: 1;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+@media (max-width:1920px) {
+	.side_menu ul {
+		height: 43.75rem;
+	}
+	.header_container .logo img{
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+@media (max-width:1599.98px) {
+	.side_menu ul {
+		height: 37.5rem;
+	}
+	.header_container .logo img{
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+@media (max-width:1439.98px) {
+	.side_menu ul {
+		height: 34.375rem;
+	}
+}
+
+@media (max-width:1920px) {
+	.side_menu ul {
+		height: 43.75rem;
+	}
+	.header_container .logo img{
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+@media (max-width:1599.98px) {
+	.side_menu ul {
+		height: 37.5rem;
+	}
+}
+
+@media (max-width:1439.98px) {
+	.side_menu ul {
+		height: 30.375rem;
+	}
+}
