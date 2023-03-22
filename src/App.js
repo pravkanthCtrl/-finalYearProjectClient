@@ -1,21 +1,24 @@
 import {Routes,Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { useState } from "react";
 import Homepage from "./components/homepage/Homepage";
 import Nav from "./components/nav/Nav";
 import About from "./components/about/About"
 import AnimatedCursor from "react-animated-cursor"
-import InfoPage from "./components/info/InfoPage";
 import Upload from "./components/upload/Upload"
 
 function App() {
+  const [darkMode,setDarkMode] = useState(false)
+  const handleDarkMode = ()=>{
+    setDarkMode(darkMode => !darkMode)
+  }
+  console.log(darkMode);
   return (
     <div className="app">
-      <Nav/>
+      <Nav darkMode={darkMode}/>
       <Routes>
-        <Route path="/" element={<Homepage/>}/>
-        <Route path="/info" element={<About/>}/>
-        <Route path="/graph" element={<Upload/>}/>
+        <Route path="/" element={<Homepage darkMode={darkMode} setDarkMode={setDarkMode}/>}/>
+        <Route path="/info" element={<About darkMode={darkMode} setDarkMode={setDarkMode}/>}/>
       </Routes>
       <AnimatedCursor 
         innerSize={16}
