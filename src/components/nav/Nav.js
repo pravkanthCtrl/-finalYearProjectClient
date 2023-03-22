@@ -3,9 +3,9 @@ import {Link} from "react-router-dom"
 
 import './nav.css'
 
-const Nav = () => {
+const Nav = ({darkMode}) => {
   return (
-    <div className='nav header_container'>
+    <div className={darkMode?'nav header_container':'nav header_container dark'}>
       <div className='logo'>
         <img src="https://cdn.dribbble.com/users/677572/screenshots/16492805/media/2668c6eb70a7e77319c489b842b97be7.png?compress=1&resize=768x576&vertical=top" alt="logo" />
       </div>
@@ -16,13 +16,13 @@ const Nav = () => {
                 window.location.href = "mailto:anto19103.ei@rmkec.ac.in";
                 e.preventDefault();
             }}>
-            <li>Contact</li>
+            <li className={!darkMode?"dark":""}>Contact</li>
             </Link>
             <Link to="/info">
-              <li>About</li>
+              <li className={!darkMode?"dark":""}>About</li>
             </Link>
             <Link to="/">
-              <li>Home</li>
+              <li className={!darkMode?"dark":""}>Home</li>
             </Link>
         </ul>
       </div>
