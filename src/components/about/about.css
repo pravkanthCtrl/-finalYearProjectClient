@@ -12,6 +12,12 @@
     height: 90vh !important;
     overflow-y: scroll;
     padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+}
+.about-content .content.dark{
+    background-color: #222831;
+    color: #EEEEEE;
 }
 .about-content .content .para{
     overflow-y: scroll;
@@ -30,13 +36,20 @@
   border-right: 2px solid #70707020;
   margin-left: 2rem !important;
   margin-top: -1rem;
-
+}
+.about-content .about-heading.dark{
+    border-left: 2px solid #393E46;
+    border-right: 2px solid #393E46;
 }
 .about-content .about-heading h1{
   writing-mode: vertical-rl; 
   transform: rotate(180deg);
   text-align: center;
   padding: 0 1rem;
+    color: black;
+}
+.about-content .about-heading h1.dark{
+    color: #FD7014;
 }
 .about-content .about-img-btn{
     display: flex;
@@ -44,6 +57,12 @@
     justify-content: center;
     align-items: center;
     padding:0 4rem;
+    background-color: white;
+    color: dark;
+}
+.about-content .about-img-btn.dark{
+    background-color: #222831;
+    color: #EEEEEE;
 }
 .video{
     width: 500px !important;
@@ -57,11 +76,18 @@
     cursor: pointer !important;
     transition: .3s ease all;
 }
+.about-btn.dark{
+    background-color: #FD7014;
+    color: #EEEEEE;
+}
 .about-btn:hover{
     background-color: rgb(1, 100, 1);
     color: white;
 }
-
+.about-btn.dark:hover{
+    background-color: #ff6a07;
+    color: #EEEEEE;
+}
 .annotate-image{
     width: 20rem;
     margin: 0 auto;
@@ -105,11 +131,13 @@
     border-radius: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     width: 400px;
-    height: 110px;
+    height: 105px;
     background-color: #ffffff;
     padding: 5px 15px 20px;
   }
-  
+  .card.dark{
+    background-color: #393E46;
+  }
   .drop_box {
     margin: 5px 0;
     padding: 15px;
@@ -130,7 +158,9 @@
     outline: none;
     transition: 0.3s;
   }
-  
+  .btn.dark{
+    background-color: #FD7014;
+  }
   .btn:hover{
     text-decoration: none;
     background-color: #ffffff;
