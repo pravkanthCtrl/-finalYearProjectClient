@@ -8,6 +8,11 @@
     padding: 0 4rem;
     background-color: rgb(249, 250, 250);
     color: rgb(19, 18, 18);
+
+}
+.homepage.dark{
+  background-color: #222831;
+  color: #EEEEEE;
 }
 .welcome-message{
     margin-top: -5rem;
@@ -25,6 +30,9 @@
 	border-right: 4px solid rgb(41, 41, 41);
 	animation: cursor 1s step-start infinite, 
     text 5s steps(20) alternate infinite;
+}
+.typewriter.dark{
+  border-right: 4px solid #EEEEEE;
 }
 
 .homepage ul{
@@ -48,6 +56,10 @@
     color: #806d6d;
     position: absolute;
     top: -500px;
+  }
+  .drop-text h5.dark {
+    color: #FD7014;
+
   }
   .drop-text-1{
     animation: drop 1s forwards;
