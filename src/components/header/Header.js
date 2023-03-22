@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({darkMode}) => {
   return (
-    <div className='header'>
+    <div className={darkMode?'header':'header dark'}>
         <h3>Cows rumination process</h3>
     </div>
   )
