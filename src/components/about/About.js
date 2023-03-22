@@ -5,8 +5,10 @@ import video from "./videos/video.mp4"
 import image from "./image/annote.png"
 import {Link} from "react-router-dom"
 import './about.css'
+import { GiNightSleep } from 'react-icons/gi';
+import { BsSun } from 'react-icons/bs';
 
-const About = () => {
+const About = ({darkMode,setDarkMode}) => {
   const [currentField,setCurrentField] = useState("Introduction")
   let data = {
     Introduction:{
@@ -50,9 +52,11 @@ const About = () => {
   }
   return (
     <div>
-        <Header/>
+        <Header darkMode={darkMode} style={{backgrounColor:"black"}} />
+        <div className={darkMode?`darkMode-btn`:`darkMode-btn dark`} onClick={()=>setDarkMode(darkMode => !darkMode)}>{!darkMode?<GiNightSleep/>:<BsSun/>}</div>
+
         <div className='about-content'>
-            <div className='content'>
+            <div className={darkMode?'content':'content dark'}>
               <div className='para mt-2'>
                 <h4>{data[currentField]?.heading}</h4>
                 <p>{data[currentField]?.para1}</p>
@@ -73,24 +77,24 @@ const About = () => {
                   )
                 }
               </div>
-              <div className='about-heading'>
-                <h1>{currentField}</h1>
+              <div className={darkMode?'about-heading':'about-heading dark'}>
+                <h1 className={darkMode?'':'dark'}>{currentField}</h1>
               </div>
             </div>
 
-            <div className='about-img-btn'>
+            <div className={darkMode?'about-img-btn':'about-img-btn dark'}>
                 <div className='about-video'>
                   <ReactPlayer className="video" url={video}  playing={true} muted={true} loop/>
                 </div>
                 <div className='d-flex gap-3'>
-                  <button className='about-btn' onClick={()=>setCurrentField("Introduction")}>Introduction</button>
-                  <button className='about-btn' onClick={()=>setCurrentField("Workdone")}>Workdone</button>
-                  <button className='about-btn' onClick={()=>setCurrentField("Conclusion")}>Conclusion</button>
+                  <button className={darkMode?'about-btn':'about-btn dark'} onClick={()=>setCurrentField("Introduction")}>Introduction</button>
+                  <button className={darkMode?'about-btn':'about-btn dark'} onClick={()=>setCurrentField("Workdone")}>Workdone</button>
+                  <button className={darkMode?'about-btn':'about-btn dark'} onClick={()=>setCurrentField("Conclusion")}>Conclusion</button>
                 </div>
-                <div className="card">
+                <div className={darkMode?'card':'card dark'}>
                   <div className="drop_box">
                     <Link to="">
-                      <button className="btn">Upload</button>
+                      <button className={darkMode?'btn':'btn dark'}>Upload</button>
                     </Link>
                   </div>
                 </div>
@@ -101,10 +105,3 @@ const About = () => {
 }
 
 export default About
-
-
-
-
-// <button className='about-btn' onClick={setCurrentField("introduction")}>Introduction</button>
-//                   <button className='about-btn' onClick={setCurrentField("workdone")}>Workdone</button>
-//                   <button className='about-btn' onClick={setCurrentField("conclusion")}>Conclusion</button>
